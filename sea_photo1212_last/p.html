@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<!-- ビューポートの設定 -->    
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>photo</title>
+<meta name="Keywords" content="写真,作品紹介,写真家">
+<meta name="Description" content="写真家の作品を紹介するページ" />
+
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"><!---g_font------>
+<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet"> <!---g_font------>
+    
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+    <link rel="stylesheet" href="css/css.css" type="text/css" />
+<!---header------>   
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!---header------>
+    
+<script type="text/javascript" src="jquery.flexslider-min.js"></script>    
+<link rel="canonical" href="http://www.dataplan.jp/demo/flexslider2/" />
+    
+<!-- add styles -->
+<link href="css/least.min.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<!-- add scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/least.min.js"></script>
+<script src="js/jquery.lazyload.js"></script>
+
+<!-- c -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+<link rel="stylesheet" href="./dist/css/material-photo-gallery.css">
+<!-- c -->
+    
+<!---header_m------>
+    <script>
+    $(function() {
+        var $header = $('#top-head');
+        // Nav Fixed
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 250) {
+                $header.addClass('fixed');
+            } else {
+                $header.removeClass('fixed');
+            }
+        });
+        // Nav Toggle Button
+        $('#nav-toggle').click(function(){
+            $header.toggleClass('open');
+        });
+    });
+  </script>
+<!---header_m------>
+
+    
+    
+</head>
+
+<body background="stormy_beach.gif">    
+    
+     <!---header------>
+    <header id="top-head">
+      <div class="inner">
+        <div id="mobile-head">
+          <h1 class="logo">Makiko Sakaguchi</h1>
+          <div id="nav-toggle">
+              <div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+        </div><!---mobile-head end -->
+        <nav id="global-nav" role="navgation">
+          <div id="gnav-container">
+            <ul id="gnav-ul" class="clearfix">
+              <li><a href="index.html">home</a></li>  
+              <li><a href="news.html">News</a></li>
+              <li><a href="c.html">Client works</a></li>
+              <li><a href="p.html">Private works</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div><!---inner end------>
+    </header>
+    <div id="dammy-container">
+    </div>
+  <!---header------>
+ 
+    <!-- c -->
+    <div class="m-p-g">
+			<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
+				<img src="images/img02.jpg" data-full="images/img02.jpg" class="m-p-g__thumbs-img" />
+				<img src="images/img05.jpg" data-full="images/img05.jpg" class="m-p-g__thumbs-img" />
+				<img src="images/img06.jpg" data-full="images/img06.jpg" class="m-p-g__thumbs-img" />
+			</div>
+
+			<div class="m-p-g__fullscreen"></div>
+		</div>
+
+		<script src="./dist/js/material-photo-gallery.js"></script>
+		<script>
+			var elem = document.querySelector('.m-p-g');
+
+			document.addEventListener('DOMContentLoaded', function() {
+				var gallery = new MaterialPhotoGallery(elem);
+			});
+		</script>
+   <!-- c -->
+    
+    
+
+
+    
+<!-- フッター開始 -->
+<div class="footer">
+    <p>P</p>
+	<p>Copyright © 2017</p>
+	<p>makiko sakaguchi All Rights Reserved.</p>
+</div>
+<!-- フッター終了 -->
+
+
+
+</body>
+</html>
